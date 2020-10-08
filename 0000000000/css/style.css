@@ -2218,3 +2218,27 @@ ol {
     font-size: 24px;
   }
 }
+
+.raleway {
+    font-family: "Raleway", sans-serif !important;
+}
+
+@font-face {
+  font-family: 'UTM Trajan Pro Bold';
+  src: url('../fonts/UTM TRAJAN PRO BOLD.TTF');
+}
+
+@font-face {
+  font-family: 'iCiel Bambola';
+  src: url('../fonts/iCielBambola.ttf');
+}
+
+@font-face {
+  font-family: "Great Vibes";
+  src: url('../fonts/GreatVibes-Regular.ttf');
+}
+
+@font-face {
+  font-family: Digital-7;
+  src: url('../fonts/digital-7.ttf');
+}
