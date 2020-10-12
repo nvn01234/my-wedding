@@ -188,13 +188,6 @@ var guest = null;
             projectId: "nhatlan-wedding"
         });
         var db = firebase.firestore();
-        guest = db.collection('guests').doc($.cookie('code')).get().then(function(doc) {
-            if (doc.data().bride == '1') {
-                $('.groom').hide();
-                $('.bride').show();
-            }
-
-            return doc
-        });
+        guest = db.collection('guests').doc($.cookie('code')).get();
     }
 })(jQuery);

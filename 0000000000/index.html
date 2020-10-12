@@ -131,8 +131,8 @@
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>Đếm ngược</h2>
-                        <p>Hôn lễ sẽ được tổ chức vào lúc <b class="groom">10:30 ngày 01/11/2020</b>
-                            <b class="bride" style="display: none">16:00 ngày 31/10/2020</b></p>
+                        <p>Hôn lễ sẽ được tổ chức vào lúc <b>10:30 ngày 01/11/2020</b>
+                            </p>
                         <img src="img/icon/ti.png" alt="">
                     </div>
                 </div>
@@ -195,7 +195,7 @@
                                         <span style="font-family: 'iCiel Bambola'">Nguyễn Thị Lan</span>
                                     </p>
                                     <br>
-                                    <div class="groom">
+                                    <div>
                                         <p>Vào lúc</p>
                                         <p>
                                             <span style="font-family: Digital-7; font-size: 35px; color: red;">10:30</span>
@@ -207,19 +207,6 @@
                                         <p>Tại</p>
                                         <h3 style="font-family: 'Great Vibes'; font-size: 60px;">Van Hoa Center</h3>
                                         <p style="font-family: 'UTM Trajan Pro Bold'; color: red;"><b>89 Lê Đức Thọ, Q. Nam Từ Liêm, HN</b></p>
-                                    </div>
-                                    <div class="bride" style="display: none">
-                                        <p>Vào lúc</p>
-                                        <p>
-                                            <span style="font-family: Digital-7; font-size: 35px; color: red;">16:00</span>
-                                            <span style="font-size: 38px;">|</span>
-                                            <img src="img/Saturday.png" alt="" height="30" style="margin-top:-16px">
-                                            <span style="font-size: 38px;">|</span>
-                                            <span style="font-family: 'UTM Trajan Pro Bold'; font-size: 30px; color: red;">31-10-2020</span>
-                                        </p>
-                                        <p>Tại</p>
-                                        <h3 style="font-family: 'Great Vibes'; font-size: 60px;">Khu 4</h3>
-                                        <p style="font-family: 'UTM Trajan Pro Bold'"><b>X. Hướng Đạo, H. Tam Dương, T. Vĩnh Phúc</b></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 px-2 text-center">
@@ -282,28 +269,18 @@
             'wrapAround': true
         });
 
-        function update(
-            counter,
-            name,
-        ) {
-            $('#counter').countdown(counter, function(event) {
-                $('#counter-days').text(event.strftime('%D'));
-                $('#counter-hours').text(event.strftime('%H'));
-                $('#counter-minutes').text(event.strftime('%M'));
-                $('#counter-seconds').text(event.strftime('%S'));
-            });
-            $('#name').text(name);
-        }
+        $('#counter').countdown('2020/11/01 10:30:00', function(event) {
+            $('#counter-days').text(event.strftime('%D'));
+            $('#counter-hours').text(event.strftime('%H'));
+            $('#counter-minutes').text(event.strftime('%M'));
+            $('#counter-seconds').text(event.strftime('%S'));
+        });
 
         $(function() {
             if (guest !== null) {
                 guest.then(function(doc) {
-                    var dt = doc.data().bride == '1' ? '2020/10/31 16:00:00' : '2020/11/01 10:30:00';
-                    update(dt, doc.data().name);
+                    $('#name').text(doc.data().name);
                 });
-            } else {
-                var dt = '2020/11/01 10:30:00';
-                update(dt, 'bạn');
             }
         })
     </script>
