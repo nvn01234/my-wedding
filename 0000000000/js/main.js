@@ -61,7 +61,9 @@ var guest = null;
     --------------------*/
     $('.set-bg').each(function () {
         var bg = $(this).data('setbg');
-        $(this).css('background-image', 'url(' + bg + ')');
+        if (bg) {
+            $(this).css('background-image', 'url(' + bg + ')');
+        }
     });
 
     // Search model
@@ -195,4 +197,26 @@ var guest = null;
             return doc
         });
     }
+
+    // Handles the go to top button at the footer
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+
 })(jQuery);
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  $('html, body').animate({scrollTop: 0}, 500);
+}

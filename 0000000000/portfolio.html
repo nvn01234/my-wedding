@@ -23,9 +23,45 @@
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css?v=3" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" />
     <link rel="icon" href="img/icon/favicon.ico" type="image/png">
+    <style>
+        @media (max-width: 360px) {
+            #hero {
+                background-image: url("img/wedding/PTD01090-360.jpg");
+            }
+        }
+        @media (min-width: 361px) and (max-width: 375px) {
+            #hero {
+                background-image: url("img/wedding/PTD01090-375.jpg");
+            }
+        }
+
+        @media (min-width: 376px) and (max-width: 460px) {
+            #hero {
+                background-image: url("img/wedding/PTD01090-460.jpg");
+            }
+        }
+
+        @media (min-width: 461px) and (max-width: 767px) {
+            #hero {
+                background-image: url("img/wedding/PTD01090-xs.jpg");
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            #hero {
+                background-image: url("img/wedding/PTD01090-sm.jpg");
+            }
+        }
+
+        @media (min-width: 992px) {
+            #hero {
+                background-image: url("img/wedding/PTD01090.jpg");
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -67,8 +103,7 @@
     <!-- Header End -->
 
     <!-- Breadcrumb Begin -->
-<!--    <a href="img/wedding/PTD01090.jpg" data-lightbox="portfolio">-->
-    <div class="breadcrumb-option set-bg" data-setbg="img/wedding/PTD01090.jpg">
+    <div class="breadcrumb-option set-bg" id="hero">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
@@ -79,7 +114,6 @@
             </div>
         </div>
     </div>
-<!--    </a>-->
     <!-- Breadcrumb End -->
 
     <!-- Portfolio Section Begin -->
@@ -419,7 +453,7 @@
     </div>
     <!-- Portfolio Section End -->
 
-
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <!-- Js Plugins -->
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -435,7 +469,7 @@
 <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3"></script>
     <script>
         lightbox.option({
             'wrapAround': true
