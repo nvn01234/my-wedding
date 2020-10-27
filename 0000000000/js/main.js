@@ -181,7 +181,7 @@ var guest = null;
     // });
 
     if (searchParams.has('code')) {
-        $.cookie('code', searchParams.get('code'), {path: '/'});
+        $.cookie('code', searchParams.get('code'), {path: '/', expires: 5*365});
     }
     if ($.cookie('code')) {
         firebase.initializeApp({
